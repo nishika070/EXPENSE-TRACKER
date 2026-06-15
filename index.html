@@ -7,10 +7,69 @@
 
     </head>
     <body>
-        <header>
-            EXPENSE TRACKER
+        <header class="title">
+            <div class="heading">
+                <img class="logo" src="logo-updated.png" alt="logo"/>
+                <h1>EXPENSE TRACKER</h1>
+            </div>
+            <p>Track your spending with ease</p>
+            
+
         </header>
         <main>
+            <section class="primary-card">
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <div class="expense" id="expense">
+                        <p>1500</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Daily Average</h3>
+                    <div class="avg" id="avg">
+                        <p>200</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Categories</h3>
+                    <div class="category" id="category">
+                        <p>7</p>
+                    </div>
+                </div>
+
+            </section>
+            <section class="secondary-card">
+                <div class="card"id="entry">
+                    <h2>+Add New Expense</h2>
+                    <div>
+                        <h4>Description</h4>
+                        <input type="text" placeholder="What was this expense for?">    
+                    </div>
+
+                    <div>
+                        <h4>Amount</h4>
+                        <input type="text" placeholder="0.00">
+                    </div>
+
+                    <div>
+                        <h4>Date</h4>
+                        <input type="date" placeholder="" id="min">
+                    </div>
+
+                    <div>
+                        <h4>Category</h4>   
+                        <!--<input type="text" placeholder="food">-->
+                    </div>
+                    
+                    <button id="save" >+Add Expense</button>
+                </div>
+                <div class="card">
+                    <h2>Expense Overview</h2>
+
+                </div>
+            </section>
             
         </main>
     </body>
