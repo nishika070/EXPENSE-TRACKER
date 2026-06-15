@@ -1,16 +1,21 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     background-color:#F4F7FC;;
-    padding: 24px;
+    padding: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    color:  rgb(82, 78, 78);;
 }
 header /*title*/
 {
+    padding-top: 20px;
     display: flex;
+    gap: 1px;
     flex-direction: column;
-    gap: 3px;
     justify-content: center;
     align-items: center;
     color: rgb(82, 78, 78);
@@ -18,7 +23,7 @@ header /*title*/
 .heading{ /*only the logo and text*/
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 4px;
     justify-content: center;
     align-items: center;
 
@@ -29,8 +34,8 @@ header /*title*/
 
 }
 .heading img{
-    width: 50px;
-    height: 40px;
+    width: 40px;
+    height: 50px;
     object-fit: contain;
 
 }
@@ -38,30 +43,157 @@ header /*title*/
 .primary-card{
     display: grid ;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 7px;
     margin-top: 25px;
 }
 .primary-card .card{
-
+    display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(204, 204, 204);
-    border-radius: 15px;
-    box-shadow: 3px blur rgb(165, 165, 210);
-    padding-left:15px;
+    border: 1px solid rgb(235, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.1);
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+
 }
+.card p{
+    color: #5279b0;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+
+
+}
+.card h2{
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: #444;
+}
+/* ==========================
+   SECONDARY SECTION
+========================== */
+
 .secondary-card{
     margin-top: 25px;
     display: grid;
-    grid-template-columns: 1.3fr 1.7fr;
-    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
-.secondary-card .card{
-    
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(204, 204, 204);
-    border-radius: 15px;
-    box-shadow: 3px blur rgb(165, 165, 210);
-    padding-left:15px;
-    padding-top: 15px;
 
+.secondary-card .card{
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   FORM FIELDS
+========================== */
+
+.secondary-card .card-details{
+    background: #fafbfd;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.secondary-card .card-details h4{
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #444;
+}
+
+.secondary-card .card-details input,
+.secondary-card .card-details select{
+
+
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    transition: 0.2s;
+}
+
+.secondary-card .card-details input:focus,
+.secondary-card .card-details select:focus{
+
+    outline: none;
+    border-color: #5279b0;
+
+    box-shadow:0px 0px 0px 3px rgba(82,121,176,0.15);
+}
+
+.secondary-card .card-button{
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #5279b0;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.secondary-card .card-button:hover{
+    transform: translateY(-2px);
+    opacity: 0.90;
+}
+
+/* ==========================
+   RECORD LIST
+========================== */
+
+#expense-list{
+    max-height: 500px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.card li{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+
+    padding: 14px;
+
+    list-style: none;
+
+    background: #f8fafc;
+
+    border-left: 4px solid #5279b0;
+    border-radius: 10px;
+
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+
+    transition: 0.2s;
+}
+
+.card li:hover{
+    transform: translateX(4px);
 }

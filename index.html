@@ -9,7 +9,7 @@
     <body>
         <header class="title">
             <div class="heading">
-                <img class="logo" src="logo-updated.png" alt="logo"/>
+                <img class="logo" src="logo.png" alt="logo"/>
                 <h1>EXPENSE TRACKER</h1>
             </div>
             <p>Track your spending with ease</p>
@@ -21,20 +21,20 @@
                 <div class="card">
                     <h3>Total Expenses</h3>
                     <div class="expense" id="expense">
-                        <p>1500</p>
+                        <p>0</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3>Daily Average</h3>
+                    <h3>Weekly Average</h3>
                     <div class="avg" id="avg">
-                        <p>200</p>
+                        <p>0</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <h3>Categories</h3>
-                    <div class="category" id="category">
+                    <div class="category" id="category-list">
                         <p>7</p>
                     </div>
                 </div>
@@ -43,35 +43,48 @@
             <section class="secondary-card">
                 <div class="card"id="entry">
                     <h2>+Add New Expense</h2>
-                    <div>
+                    <div class="card-details">
                         <h4>Description</h4>
-                        <input type="text" placeholder="What was this expense for?">    
+                        <input id="desc" type="text" placeholder="What was this expense for?">    
                     </div>
 
-                    <div>
+                    <div class="card-details">
                         <h4>Amount</h4>
-                        <input type="text" placeholder="0.00">
+                        <input id="amount" type="number" placeholder="0.00">
                     </div>
 
-                    <div>
+                    <div class="card-details">
                         <h4>Date</h4>
-                        <input type="date" placeholder="" id="min">
+                        <input id="date" type="date" placeholder="" id="min">
                     </div>
 
-                    <div>
+                    <div class="card-details">
                         <h4>Category</h4>   
-                        <!--<input type="text" placeholder="food">-->
+                        <select class="category" id="category">
+                            <option value="Food">Food</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Health">Health</option>
+                            <option value="Bills">Bills</option>
+                            <option value="Education">Education</option>
+                            <option value="Entertainment">Entertainment</option>
+                        </select>
                     </div>
                     
-                    <button id="save" >+Add Expense</button>
+                    <button  class="card-button" id="save" >+Add Expense</button>
                 </div>
                 <div class="card">
-                    <h2>Expense Overview</h2>
+                    <h2>Expense Record</h2>
+                    <ul id="expense-list">
+
+                    </ul>
 
                 </div>
             </section>
             
         </main>
+    <script src="app.js"></script>
     </body>
 
 </html>
+>
